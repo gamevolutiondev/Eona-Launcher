@@ -39,6 +39,8 @@ Partial Class mainform
         p.StartInfo.Arguments = "name=" & u.username & " directPlay=1"
         p.Start()
 
+
+
     End Sub
 
 End Class

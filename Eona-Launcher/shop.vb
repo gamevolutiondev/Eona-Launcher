@@ -4,6 +4,7 @@
 Partial Class mainform
 
     Dim pnlshop As New Panel
+    WithEvents webbrowsershop As WebBrowser
 
 
     Public Sub pnlshopsub()
@@ -19,10 +20,29 @@ Partial Class mainform
         pnlshop.BackColor = Color.Transparent
         pnlshop.BringToFront()
 
-
+        AddHandler pnlshop.Click, AddressOf pnlshop_Click
 
     End Sub
 
+    Private Sub pnlshop_Click()
 
+        Dim urldyn As Uri = New Uri("http://eona.gamevolution.de/MCShop")
+        '?nopanel=true"
+
+        pnlshop.Dock = DockStyle.Fill
+        pnlshop.BringToFront()
+        balkenoben.BringToFront()
+        cmdclose.BringToFront()
+        cmdminimize.BringToFront()
+        bpeinstellungen.BringToFront()
+
+
+        webbrowsershop = New WebBrowser
+        webbrowsershop.Parent = pnlshop
+        webbrowsershop.Dock = DockStyle.Fill
+
+
+
+    End Sub
 End Class
 

@@ -216,9 +216,18 @@
     <None Include="EonaLauncher.jar" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\userundcity.png" />
+    <None Include="Resources\Support.png" />
     <None Include="Resources\Minecraft.png" />
     <Content Include="changelog.txt" />
     <None Include="Resources\EonaLauncher.jar" />
+    <None Include="Resources\GV.png" />
+    <None Include="Resources\dynmap.png" />
+    <None Include="Resources\city.png" />
+    <None Include="Resources\forum.png" />
+    <None Include="Resources\gs.png" />
+    <None Include="Resources\homepage.png" />
+    <None Include="Resources\news.png" />
     <Content Include="Resources\Spenden.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

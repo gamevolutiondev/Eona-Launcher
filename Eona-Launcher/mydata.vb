@@ -15,10 +15,10 @@ Partial Class mainform
         pnlmydata.Location = New Point(425, 85)
         pnlmydata.Size = New Size(160, 160)
         pnlmydata.Visible = True
-        'pnlmydata.BackgroundImage = My.Resources.Minecraft
-        'pnlmydata.BackgroundImageLayout = ImageLayout.Stretch
-        'pnlmydata.BackColor = Color.Transparent
-        pnlmydata.BackColor = Color.FromArgb(100, Color.LightYellow)
+        pnlmydata.BackgroundImage = My.Resources.userundcity
+        pnlmydata.BackgroundImageLayout = ImageLayout.Stretch
+        pnlmydata.BackColor = Color.Transparent
+        'pnlmydata.BackColor = Color.FromArgb(100, Color.LightYellow)
         pnlmydata.BringToFront()
 
 
@@ -34,6 +34,7 @@ Partial Class mainform
         pnlmydata.Size = New Size(1010, 485)
         pnlmydata.BackColor = Color.Transparent
         pnlmydata.BringToFront()
+        pnlmydata.BackgroundImage = Nothing
 
         pbback.Show()
         pbback.BringToFront()
@@ -45,10 +46,10 @@ Partial Class mainform
         pnlgs.Location = New Point(260, 150)
         pnlgs.Size = New Size(160, 160)
         pnlgs.Visible = True
-        'pnlgs.BackgroundImage = My.Resources.Minecraft
-        'pnlgs.BackgroundImageLayout = ImageLayout.Stretch
-        'pnlgs.BackColor = Color.Transparent
-        pnlgs.BackColor = Color.Black
+        pnlgs.BackgroundImage = My.Resources.gs
+        pnlgs.BackgroundImageLayout = ImageLayout.Stretch
+        pnlgs.BackColor = Color.Transparent
+        'pnlgs.BackColor = Color.Black
         pnlgs.BringToFront()
 
 
@@ -62,10 +63,10 @@ Partial Class mainform
         pnlcity.Location = New Point(580, 150)
         pnlcity.Size = New Size(160, 160)
         pnlcity.Visible = True
-        'pnlcity.BackgroundImage = My.Resources.Minecraft
-        'pnlcity.BackgroundImageLayout = ImageLayout.Stretch
-        'pnlcity.BackColor = Color.Transparent
-        pnlcity.BackColor = Color.Black
+        pnlcity.BackgroundImage = My.Resources.city
+        pnlcity.BackgroundImageLayout = ImageLayout.Stretch
+        pnlcity.BackColor = Color.Transparent
+        'pnlcity.BackColor = Color.Black
         pnlcity.BringToFront()
 
         AddHandler pnlcity.Click, AddressOf pnlcity_Click
@@ -75,6 +76,7 @@ Partial Class mainform
     Private Sub pnlgs_Click()
 
         pnlgs.Dock = DockStyle.Fill
+        pnlgs.BackgroundImage = Nothing
 
     End Sub
 
@@ -82,6 +84,7 @@ Partial Class mainform
     Private Sub pnlcity_Click()
 
         pnlcity.Dock = DockStyle.Fill
+        pnlcity.BackgroundImage = Nothing
 
     End Sub
 

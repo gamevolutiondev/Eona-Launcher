@@ -28,10 +28,10 @@ Partial Class mainform
         pnlsup.Location = New Point(750, 300)
         pnlsup.Size = New Size(160, 160)
         pnlsup.Visible = True
-        'pnlsup.BackgroundImage = My.Resources.shop
-        'pnlsup.BackgroundImageLayout = ImageLayout.Stretch
-        'pnlsup.BackColor = Color.Transparent
-        pnlsup.BackColor = Color.FromArgb(100, Color.LightYellow)
+        pnlsup.BackgroundImage = My.Resources.Support
+        pnlsup.BackgroundImageLayout = ImageLayout.Stretch
+        pnlsup.BackColor = Color.Transparent
+        'pnlsup.BackColor = Color.FromArgb(100, Color.LightYellow)
         pnlsup.BringToFront()
 
         AddHandler pnlsup.Click, AddressOf pnlsup_Click
@@ -44,6 +44,7 @@ Partial Class mainform
         pnlsup.Size = New Size(1010, 485)
         pnlsup.BackColor = Color.Transparent
         pnlsup.BringToFront()
+        pnlsup.BackgroundImage = Nothing
 
         pbback.Show()
         pbback.BringToFront()
@@ -259,7 +260,15 @@ Partial Class mainform
 
     Private Sub cmdchangelog_Click()
 
-        changelog.Show()
+        Dim clwindow As New changelog
+        Dim cl As New IO.FileStream(".\changelog.txt", IO.FileMode.OpenOrCreate)
+        Dim clr As New IO.StreamReader(cl)
+        Dim data() As String = clr.ReadToEnd().Split(vbCrLf)
+        For Each s As String In data
+            clwindow.tbchangelog.Text &= s & vbCrLf
+        Next
+
+        clwindow.Show()
 
 
     End Sub

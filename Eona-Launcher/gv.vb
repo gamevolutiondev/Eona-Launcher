@@ -23,10 +23,10 @@ Partial Class mainform
         gv.Location = New Point(100, 300)
         gv.Size = New Size(160, 160)
         gv.Visible = True
-        'gv.BackgroundImage = My.Resources.Minecraft
-        'gv.BackgroundImageLayout = ImageLayout.Stretch
-        'gv.BackColor = Color.Transparent
-        gv.BackColor = Color.FromArgb(100, Color.LightYellow)
+        gv.BackgroundImage = My.Resources.GV
+        gv.BackgroundImageLayout = ImageLayout.Stretch
+        gv.BackColor = Color.Transparent
+        'gv.BackColor = Color.FromArgb(100, Color.LightYellow)
         gv.BringToFront()
 
 
@@ -55,6 +55,7 @@ Partial Class mainform
         gv.Location = New Point(0, 35)
         gv.Size = New Size(1010, 485)
         gv.BackColor = Color.Transparent
+        gv.BackgroundImage = Nothing
         gv.BringToFront()
 
         'Zurückpfeil
@@ -75,10 +76,10 @@ Partial Class mainform
         pnlnews.Location = New Point(260, 150)
         pnlnews.Size = New Size(160, 160)
         pnlnews.Visible = True
-        'pnlnews.BackgroundImage = My.Resources.Minecraft
-        'pnlnews.BackgroundImageLayout = ImageLayout.Stretch
-        'pnlnews.BackColor = Color.Transparent
-        pnlnews.BackColor = Color.Black
+        pnlnews.BackgroundImage = My.Resources.news
+        pnlnews.BackgroundImageLayout = ImageLayout.Stretch
+        pnlnews.BackColor = Color.Transparent
+        'pnlnews.BackColor = Color.Black
         pnlnews.BringToFront()
 
 
@@ -92,10 +93,10 @@ Partial Class mainform
         pnlforum.Location = New Point(580, 150)
         pnlforum.Size = New Size(160, 160)
         pnlforum.Visible = True
-        'pnlforum.BackgroundImage = My.Resources.Minecraft
-        'pnlforum.BackgroundImageLayout = ImageLayout.Stretch
-        'pnlforum.BackColor = Color.Transparent
-        pnlforum.BackColor = Color.Black
+        pnlforum.BackgroundImage = My.Resources.forum
+        pnlforum.BackgroundImageLayout = ImageLayout.Stretch
+        pnlforum.BackColor = Color.Transparent
+        'pnlforum.BackColor = Color.Black
         pnlforum.BringToFront()
 
 
@@ -112,6 +113,7 @@ Partial Class mainform
         pnlnews.Size = New Size(1010, 485)
         pnlnews.BackColor = Color.Transparent
         pnlnews.BringToFront()
+        pnlnews.BackgroundImage = Nothing
 
         Dim urlnews As Uri = New Uri("http://eona.gamevolution.de/extern/eonalauncher/news.html")
 
@@ -138,6 +140,7 @@ Partial Class mainform
         pnlforum.Size = New Size(1010, 485)
         pnlforum.BackColor = Color.Black
         pnlforum.BringToFront()
+        pnlforum.BackgroundImage = Nothing
 
         webbrowser = New WebBrowser
         webbrowser.Name = "webbrowserforum"
@@ -176,8 +179,12 @@ Partial Class mainform
 
         Try
             webbrowser.Dispose()
+            pnlnews.Size = New Size(160, 160)
+            pnlnews.Location = New Point(260, 150)
+            pnlnews.BackgroundImage = My.Resources.news
             pnlforum.Location = New Point(580, 150)
             pnlforum.Size = New Size(160, 160)
+            pnlforum.BackgroundImage = My.Resources.forum
             pbback.Show()
             pbback2.Hide()
             pbback.BringToFront()

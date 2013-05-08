@@ -1,5 +1,30 @@
-﻿lg,dfmgolpödfg
-fdgdflgmfdm
-fgdlkngfkldfnmg
-fmgkldfmgkldfg
-dfglkmgdfklögmfdklögmdfklnmgkldf
+﻿Changelog:
+
+
+Alpha 1.0:
+
+- Background Changer
+- Passwort Abfrage
+- EonaLauncher.jar eingebaut
+- gvpanel Bild eingefügt
+- mcpanel Bild eingefügt
+- support und Team Bild eingefügt
+- Shop Bild eingefügt
+- dynpanel Bild eingefügt
+- mydatapanel Bild eingefügt
+- Dynmap eingefügt
+- Forum eingefügt
+- Changelog eingefügt
+- EMail Support eingefügt
+- Forum Support eingefügt
+- Einstellungen eingefügt
+- cmdclose eingefügt
+- cmdminimize eingefügt
+- userpanel Bild eingefügt
+- citypanel Bild eingefügt
+- newspanel Bild eingefügt
+- Forumpanel Bild eingefügt
+- Eingelogt als eingefügt
+- diverse hintergrund funktionen eingefügt
+
+

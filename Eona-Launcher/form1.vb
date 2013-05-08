@@ -238,10 +238,10 @@ Public Class mainform
             cmdsupclose()
             pnlsup.Location = New Point(750, 300)
             pnlsup.Size = New Size(160, 160)
-            'pnlsup.BackgroundImage = My.Resources.shop
-            'pnlsup.BackgroundImageLayout = ImageLayout.Stretch
-            'pnlsup.BackColor = Color.Transparent
-            pnlsup.BackColor = Color.FromArgb(100, Color.LightYellow)
+            pnlsup.BackgroundImage = My.Resources.Support
+            pnlsup.BackgroundImageLayout = ImageLayout.Stretch
+            pnlsup.BackColor = Color.Transparent
+            'pnlsup.BackColor = Color.FromArgb(100, Color.LightYellow)
             pbback.Hide()
 
         Catch ex As Exception
@@ -263,10 +263,10 @@ Public Class mainform
             webbrowser2.Dispose()
             pnldyn.Location = New Point(425, 300)
             pnldyn.Size = New Size(160, 160)
-            'pnldyn.BackgroundImage = My.Resources.
-            'pnldyn.BackgroundImageLayout = ImageLayout.Stretch
-            'pnldyn.BackColor = Color.Transparent
-            pnldyn.BackColor = Color.FromArgb(100, Color.LightYellow)
+            pnldyn.BackgroundImage = My.Resources.dynmap
+            pnldyn.BackgroundImageLayout = ImageLayout.Stretch
+            pnldyn.BackColor = Color.Transparent
+            'pnldyn.BackColor = Color.FromArgb(100, Color.LightYellow)
 
 
         Catch ex As Exception
@@ -294,10 +294,10 @@ Public Class mainform
             Me.Controls.Remove(pnlforum)
             gv.Location = New Point(100, 300)
             gv.Size = New Size(160, 160)
-            'gv.BackgroundImage = My.Resources.
-            'gv.BackgroundImageLayout = ImageLayout.Stretch
-            'gv.BackColor = Color.Transparent
-            gv.BackColor = Color.FromArgb(100, Color.LightYellow)
+            gv.BackgroundImage = My.Resources.GV
+            gv.BackgroundImageLayout = ImageLayout.Stretch
+            gv.BackColor = Color.Transparent
+            'gv.BackColor = Color.FromArgb(100, Color.LightYellow)
             pbback.Hide()
           
 
@@ -309,10 +309,10 @@ Public Class mainform
 
         Try
 
-            'pnlmydata.BackgroundImage = My.Resources.Minecraft
-            'pnlmydata.BackgroundImageLayout = ImageLayout.Stretch
-            'pnlmydata.BackColor = Color.Transparent
-            pnlmydata.BackColor = Color.FromArgb(100, Color.LightYellow)
+            pnlmydata.BackgroundImage = My.Resources.userundcity
+            pnlmydata.BackgroundImageLayout = ImageLayout.Stretch
+            pnlmydata.BackColor = Color.Transparent
+            'pnlmydata.BackColor = Color.FromArgb(100, Color.LightYellow)
             pnlmydata.Location = New Point(425, 85)
             pnlmydata.Size = New Size(160, 160)
 

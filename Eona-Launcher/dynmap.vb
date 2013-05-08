@@ -14,10 +14,10 @@ Partial Class mainform
         pnldyn.Location = New Point(425, 300)
         pnldyn.Size = New Size(160, 160)
         pnldyn.Visible = True
-        'gv.BackgroundImage = My.Resources.
-        'gv.BackgroundImageLayout = ImageLayout.Stretch
-        'gv.BackColor = Color.Transparent
-        pnldyn.BackColor = Color.FromArgb(100, Color.LightYellow)
+        pnldyn.BackgroundImage = My.Resources.dynmap
+        pnldyn.BackgroundImageLayout = ImageLayout.Stretch
+        pnldyn.BackColor = Color.Transparent
+        'pnldyn.BackColor = Color.FromArgb(100, Color.LightYellow)
         pnldyn.BringToFront()
 
 
@@ -36,6 +36,7 @@ Partial Class mainform
         pnldyn.Size = New Size(1010, 485)
         pnldyn.BackColor = Color.Transparent
         pnldyn.BringToFront()
+        pnldyn.BackgroundImage = Nothing
 
         webbrowser2 = New WebBrowser
         webbrowser2.Name = "webbrowserdyn"
