@@ -1,0 +1,1 @@
+java -jar EonaLauncher.jar name=%1 directPlay=1
