@@ -320,6 +320,18 @@ Public Class mainform
 
         End Try
 
+
+        'Shop
+
+        Try
+
+            webbrowsershop.Dispose()
+            Me.Controls.Remove(webbrowsershop)
+            pnlshop.Dock = DockStyle.None
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
 

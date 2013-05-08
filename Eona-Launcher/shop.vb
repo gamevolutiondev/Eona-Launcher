@@ -10,7 +10,7 @@ Partial Class mainform
     Public Sub pnlshopsub()
 
         pnlshop = New Panel
-        pnlshop.Name = "pnlmc"
+        pnlshop.Name = "pnlshop"
         pnlshop.Parent = Me
         pnlshop.Location = New Point(750, 85)
         pnlshop.Size = New Size(160, 160)
@@ -26,7 +26,7 @@ Partial Class mainform
 
     Private Sub pnlshop_Click()
 
-        Dim urldyn As Uri = New Uri("http://eona.gamevolution.de/MCShop")
+        Dim urlshop As Uri = New Uri("http://eona.gamevolution.de/MCShop")
         '?nopanel=true"
 
         pnlshop.Dock = DockStyle.Fill
@@ -40,6 +40,10 @@ Partial Class mainform
         webbrowsershop = New WebBrowser
         webbrowsershop.Parent = pnlshop
         webbrowsershop.Dock = DockStyle.Fill
+        webbrowsershop.Url = urlshop
+
+        pbback.Show()
+        pbback.BringToFront()
 
 
 
