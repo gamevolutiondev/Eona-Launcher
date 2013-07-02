@@ -124,6 +124,7 @@ Partial Class mainform
         webbrowser.Size = New Size(1010, 485)
         webbrowser.BringToFront()
         webbrowser.Url = urlnews
+        webbrowser.ScriptErrorsSuppressed = True
 
         pbback.Hide()
         pbback2.Show()
@@ -134,7 +135,7 @@ Partial Class mainform
 
     Private Sub pnlforum_Click()
 
-        Dim urlforum As Uri = New Uri("http://board.gamevolution.de/")
+        Dim urlforum As Uri = New Uri("https://board.gamevolution.de/index.php/BoardList/")
 
         pnlforum.Location = New Point(0, 0)
         pnlforum.Size = New Size(1010, 485)
@@ -150,6 +151,7 @@ Partial Class mainform
         webbrowser.BringToFront()
         webbrowser.DocumentStream = loggeForumEin()
         webbrowser.ScrollBarsEnabled = True
+        webbrowser.ScriptErrorsSuppressed = True
 
         wbback = New PictureBox
         wbback.Parent = webbrowser

@@ -4,7 +4,6 @@ Imports System.IO
 
 Public Class mainform
 
-
     Private liste As New ArrayList
     Private thr_back As Boolean = False
 
@@ -35,8 +34,9 @@ Public Class mainform
 
         pannelsshow()
 
+        Audio()
 
-        
+
     End Sub
 
     'Zeigt Panels an
@@ -333,5 +333,6 @@ Public Class mainform
 
         End Try
     End Sub
+
 End Class
 

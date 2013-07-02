@@ -63,6 +63,18 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Alpha|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Alpha\</OutputPath>
+    <DocumentationFile>Eona-Launcher.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CodeKicker.BBCode">
       <HintPath>Resources\CodeKicker.BBCode.dll</HintPath>
@@ -106,6 +118,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Audio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="changelog.Designer.vb">
       <DependentUpon>changelog.vb</DependentUpon>
     </Compile>
@@ -228,6 +243,8 @@
     <None Include="Resources\gs.png" />
     <None Include="Resources\homepage.png" />
     <None Include="Resources\news.png" />
+    <None Include="Resources\Crusade.mp3" />
+    <None Include="Resources\Crusade.wav" />
     <Content Include="Resources\Spenden.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

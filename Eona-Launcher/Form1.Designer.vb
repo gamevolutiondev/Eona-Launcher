@@ -24,6 +24,7 @@ Partial Class mainform
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.tbpbzurück = New System.Windows.Forms.ToolTip(Me.components)
+        Me.pbback = New System.Windows.Forms.PictureBox()
         Me.cmdclose = New System.Windows.Forms.Button()
         Me.cmdminimize = New System.Windows.Forms.Button()
         Me.pnllogin = New System.Windows.Forms.Panel()
@@ -31,12 +32,26 @@ Partial Class mainform
         Me.lbllogin = New System.Windows.Forms.Label()
         Me.bpeinstellungen = New System.Windows.Forms.PictureBox()
         Me.balkenoben = New System.Windows.Forms.PictureBox()
-        Me.pbback = New System.Windows.Forms.PictureBox()
+        Me.pbaudio = New System.Windows.Forms.PictureBox()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        CType(Me.pbback, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnllogin.SuspendLayout()
         CType(Me.bpeinstellungen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.balkenoben, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbback, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbaudio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'pbback
+        '
+        Me.pbback.BackColor = System.Drawing.Color.Transparent
+        Me.pbback.Image = Global.Eona_Launcher.My.Resources.Resources.zurückpfeil1
+        Me.pbback.Location = New System.Drawing.Point(12, 45)
+        Me.pbback.Name = "pbback"
+        Me.pbback.Size = New System.Drawing.Size(71, 27)
+        Me.pbback.TabIndex = 2
+        Me.pbback.TabStop = False
+        Me.tbpbzurück.SetToolTip(Me.pbback, "Zurück")
+        Me.pbback.Visible = False
         '
         'cmdclose
         '
@@ -109,23 +124,21 @@ Partial Class mainform
         Me.balkenoben.TabIndex = 3
         Me.balkenoben.TabStop = False
         '
-        'pbback
+        'pbaudio
         '
-        Me.pbback.BackColor = System.Drawing.Color.Transparent
-        Me.pbback.Image = Global.Eona_Launcher.My.Resources.Resources.zurückpfeil1
-        Me.pbback.Location = New System.Drawing.Point(12, 45)
-        Me.pbback.Name = "pbback"
-        Me.pbback.Size = New System.Drawing.Size(71, 27)
-        Me.pbback.TabIndex = 2
-        Me.pbback.TabStop = False
-        Me.tbpbzurück.SetToolTip(Me.pbback, "Zurück")
-        Me.pbback.Visible = False
+        Me.pbaudio.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pbaudio.Location = New System.Drawing.Point(818, 7)
+        Me.pbaudio.Name = "pbaudio"
+        Me.pbaudio.Size = New System.Drawing.Size(24, 22)
+        Me.pbaudio.TabIndex = 8
+        Me.pbaudio.TabStop = False
         '
         'mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1010, 520)
+        Me.Controls.Add(Me.pbaudio)
         Me.Controls.Add(Me.pnllogin)
         Me.Controls.Add(Me.bpeinstellungen)
         Me.Controls.Add(Me.cmdminimize)
@@ -134,11 +147,12 @@ Partial Class mainform
         Me.Controls.Add(Me.pbback)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "mainform"
+        CType(Me.pbback, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnllogin.ResumeLayout(False)
         Me.pnllogin.PerformLayout()
         CType(Me.bpeinstellungen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.balkenoben, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbback, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbaudio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -151,5 +165,7 @@ Partial Class mainform
     Friend WithEvents pnllogin As System.Windows.Forms.Panel
     Friend WithEvents lbllogin2 As System.Windows.Forms.Label
     Friend WithEvents lbllogin As System.Windows.Forms.Label
+    Friend WithEvents pbaudio As System.Windows.Forms.PictureBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 
 End Class
